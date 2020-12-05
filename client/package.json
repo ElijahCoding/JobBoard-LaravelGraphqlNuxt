@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "dev-host": "nuxt --hostman jobs.test --port 3333",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"

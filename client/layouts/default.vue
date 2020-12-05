@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="container mx-auto px-6">
+    <TheHeader />
     <Nuxt />
   </div>
 </template>
@@ -60,3 +61,9 @@ html {
   background-color: #35495e;
 }
 </style>
+<script>
+import TheHeader from "../components/TheHeader";
+export default {
+  components: {TheHeader}
+}
+</script>
