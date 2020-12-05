@@ -6,7 +6,7 @@
     </div>
 
     <div class="mt-10">
-      Jobs
+      {{ jobs }}
     </div>
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
         jobs (
                 orderBy: [{column: CREATED_AT, order: DESC}],
             ) {
-                id, job_title
+                id, job_title, job_location, job_link, company_name, company_logo
             }
         }
       `,
