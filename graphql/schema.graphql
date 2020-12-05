@@ -11,17 +11,16 @@ type Query {
     tags: [Tag!]! @all
     tag(id: ID @eq): Tag @find
 
-    jobs: [Job!]! @all
+    jobs(
+        orderBy: _ @orderBy(columns: ["created_at"])
+        hasTags: _ @whereHasConditions(columns: ["slug"])
+    ): [Job!]! @all
 }
 
 type Tag {
     id: ID!
     title: String!
     slug: String!
-}
-
-type Job {
-
 }
 
 type User {
