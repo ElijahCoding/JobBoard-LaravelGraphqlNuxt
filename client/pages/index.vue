@@ -22,7 +22,11 @@ export default {
         jobs (
                 orderBy: [{column: CREATED_AT, order: DESC}],
             ) {
-                id, job_title, job_location, job_link, company_name, company_logo
+                id, job_title, job_location, job_link, company_name, company_logo, highlighted
+                tags {
+                    title,
+                    slug
+                }
             }
         }
       `,

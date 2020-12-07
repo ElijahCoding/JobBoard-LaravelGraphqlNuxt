@@ -1,5 +1,6 @@
 <template>
-  <div class="border-b-2 border-t-2 border-gray-200 p-4 pb-2 flex justify-between group">
+  <div class="border-b-2 border-t-2 border-gray-200 p-4 pb-2 flex justify-between group"
+  :class="{ 'bg-blue-200': job.highlighted }">
     <img :src="job.company_logo" :alt="`${job.company_name} logo`" class="h-12 w-12 mr-4">
 
     <div class="flex flex-wrap items-center justify-between w-full">
