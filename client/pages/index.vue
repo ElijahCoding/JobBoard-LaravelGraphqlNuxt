@@ -6,7 +6,7 @@
     </div>
 
     <div class="mt-10">
-      {{ jobs }}
+      <job v-for="job in jobs" :key="job.id" :job="job" />
     </div>
   </div>
 </template>
