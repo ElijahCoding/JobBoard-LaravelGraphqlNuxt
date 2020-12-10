@@ -14,9 +14,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(TagsTableSeeder::class);
-
-         \App\Models\User::factory()->create([
-             'password' => bcrypt('hellojava')
-         ]);
+        $this->call(UsersTableSeeder::class);
+        $this->call(JobsTableSeeder::class);
+        $this->call(JobTagTableSeeder::class);
     }
 }
