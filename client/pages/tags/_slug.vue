@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="text-center py-10">
+    <div class="text-center py-10" v-if="tag">
       <h1 class="text-xl font-bold mb-2">{{ tag.title }} jobs</h1>
       <p class="text-gray-600 font-medium">The best {{ tag.title }} jobs in the world.</p>
 
