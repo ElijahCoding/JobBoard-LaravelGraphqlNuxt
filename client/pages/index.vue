@@ -12,12 +12,12 @@
 </template>
 
 <script>
-import ALL_TAGS from '@/graphql/AllJobs.gql'
+import ALL_JOBS from '@/graphql/AllJobs.gql'
 
 export default {
   apollo: {
     jobs: {
-      query: ALL_TAGS,
+      query: ALL_JOBS,
       fetchPolicy: 'network-only'
     }
   }

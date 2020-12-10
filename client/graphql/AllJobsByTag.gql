@@ -1,0 +1,12 @@
+query AllJobsByTag($slug: Mixed!){
+  jobs (
+    orderBy: [{column: CREATED_AT, order: DESC}],
+    hasTags: { column: SLUG, operator: EQ, value: $slug }
+  ) {
+    id, job_title, job_location, job_link, company_name, company_logo, highlighted
+    tags {
+      title,
+      slug
+    }
+  }
+}
