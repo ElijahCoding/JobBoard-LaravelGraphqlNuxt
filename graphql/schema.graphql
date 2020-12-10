@@ -32,7 +32,7 @@ type User {
     created_at: DateTime!
     updated_at: DateTime!
     jobs (
-        orderBy: _ @orderBy(columns: ["created_at"])
+        orderBy: _ @orderBy(columns: ["pinned", "created_at"])
     ): [Job!]! @hasMany
 }
 
