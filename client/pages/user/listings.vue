@@ -4,8 +4,8 @@
       <h1 class="text-4xl font-bold mb-2">Your listings</h1>
     </div>
 
-    <div class="mt-10">
-      <job v-for="job in jobs" :key="job.id" :job="job" />
+    <div class="mt-10" v-if="me">
+      <job v-for="job in me.jobs" :key="job.id" :job="job" />
     </div>
   </div>
 </template>
