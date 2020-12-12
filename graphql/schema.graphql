@@ -53,6 +53,16 @@ type Job {
     user: User! @belongsTo
 }
 
+input CreateUserInput {
+    name: String @rules(apply: ["required"])
+    email: String @rules(apply: ["required", "email"])
+    password: String @rules(apply: ["required", "min:5"]) @hash
+}
+
+input CreateUserBelongsToInput {
+    create: CreateUserInput
+}
+
 input CreateJobInput {
     job_title: String @rules(apply: ["required"])
     job_location: String @rules(apply: ["required"])
@@ -61,6 +71,7 @@ input CreateJobInput {
     company_logo: String @rules(apply: ["required", "url"])
     highlighted: Boolean @rules(apply: ["boolean"])
     pinned: Boolean @rules(apply: ["boolean"])
+    user: CreateUserBelongsToInput
 }
 
 type Mutation {
