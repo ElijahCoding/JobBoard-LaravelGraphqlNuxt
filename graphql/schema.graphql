@@ -52,3 +52,11 @@ type Job {
     tags: [Tag!]! @belongsToMany
     user: User! @belongsTo
 }
+
+input CreateJobInput {
+    
+}
+
+type Mutation {
+    createJobAndRegisterUser()
+}
